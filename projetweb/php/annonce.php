@@ -2,7 +2,7 @@
 	<html lang="fr">
         <head>
             <link rel="stylesheet" href="../css/annonce.css" />
-          <title> Txupit - Connexion </title>
+          <title> Txupit - Annonce </title>
         </head>
         <body>
 
@@ -22,8 +22,8 @@
                           echo $_SESSION["name"]; ?></p>
             <ul>
                 <li> <a href="../php/profil.php">Profil </a></li>
-                <li><a href=""> Reservation </a></li>
-                <li><a href=""> Annonce </a></li>
+                <li><a href="../php/reservation.php"> Reservation </a></li>
+                <li><a href="../php/annonce.php"> Annonce </a></li>
             </ul>
                      </div>
 
@@ -96,8 +96,5 @@
             }
 
        })
-
-
-
 
         </script>

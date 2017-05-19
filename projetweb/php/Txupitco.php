@@ -10,7 +10,6 @@ if(!isset($_SESSION['name']))
 }
 ?>
 
-
 <!DOCTYPE html>
 	<html lang="fr">
 		<head>
@@ -54,7 +53,7 @@ if(!isset($_SESSION['name']))
                       </div>';
 						 }
 						 else {
-						 	echo '<li><a href="../php/inscirption.php" id="l1"> Inscription </a></li>
+						 	echo '<li><a href="../php/inscription.php" id="l1"> Inscription </a></li>
 									<li><a href="../php/Connexion.php" id="l2"> Connexion </a></li>
 									</ul>
 								<H1> <a href="../php/Txupit.php">TXUPIT</a> </H1>
@@ -86,3 +85,4 @@ if(!isset($_SESSION['name']))
                 </ul>
             </footer>
         </body>
+</html>

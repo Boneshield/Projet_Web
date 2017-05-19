@@ -19,7 +19,6 @@ $hha=$ha.":".$ma;
 $nbp=$_POST["nbp"];
 
 
-
  $_SESSION["depart"] = $lieudep;
  $_SESSION["arrivee"] = $lieuarr;
  $_SESSION["hdep"] = $hhd;
@@ -30,7 +29,7 @@ $nbp=$_POST["nbp"];
 //pg_query($conn,"insert into trajet (adressedepart,adressarrivee,jourdepart,heuredepart,heurearrivee,nbplacesdispo) values '$lieudep','$lieuarr,'$datetrj','$hhd','$hha','$nbp'");
 
 
-pg_query($conn,"insert into trajet (adressedepart,adressearrivee,jourdepart,heuredepart,heurearrivee,nbplacesdispo) values (upper('{$lieudep}') , upper('{$lieuarr}') , '{$datetrj}' , '{$hhd}' , '{$hha}' , '{$nbp}') ");
+pg_query($conn,"insert into trajet (cletrajet,adressedepart,adressearrivee,jourdepart,heuredepart,heurearrivee,nbplacesdispo) values (upper('{$lieudep}') , upper('{$lieuarr}') , '{$datetrj}' , '{$hhd}' , '{$hha}' , '{$nbp}') ");
 
 
 echo '<script language="Javascript">
@@ -38,7 +37,5 @@ echo '<script language="Javascript">
 document.location.replace("http://127.0.0.1/projetweb/php/annonce.php");
 // -->
 </script>';
-
-
 
 ?>

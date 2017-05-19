@@ -13,7 +13,6 @@ $_SESSION['mail'] = $_POST["email"];
       exit;
     }
 
-
     $resulta = pg_query($conn, "SELECT  * FROM profil where mdp='{$mdp}' and mail='{$mail}'");
     $raw = pg_fetch_row($resulta);
 echo var_dump($raw);
@@ -46,8 +45,5 @@ document.location.replace("http://127.0.0.1/projetweb/php/Connexion.php");
 </script>';
 
 }
-
-
-
 
 ?>

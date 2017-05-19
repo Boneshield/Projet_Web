@@ -6,15 +6,11 @@ $conn = pg_pconnect("host =localhost port=5432 dbname=covoiturage user=php passw
       exit;
     }
 
-
 $result = pg_query($conn, "SELECT cletrajet FROM reservation WHERE cleprofil='{$_SESSION["id"]}'");
 
 $raw = pg_fetch_row($result);
 
-
-
 $trajet = pg_query($conn, "SELECT * FROM trajet WHERE cletrajet={$raw[0]}");
-
 
 $i = 0;
 
@@ -37,8 +33,8 @@ while($actuel = pg_fetch_object($trajet)){
 <!DOCTYPE html>
 	<html lang="fr">
         <head>
-            <link rel="stylesheet" href="/css/profil.css" />
-          <title> Txupit - Connexion </title>
+            <link rel="stylesheet" href="../css/profil.css" />
+          <title> Txupit - Profil </title>
         </head>
         <body>
 
@@ -48,7 +44,7 @@ while($actuel = pg_fetch_object($trajet)){
                 <ul>
                 <li><a href="" id="l2"> Deconnexion </a></li>
                 </ul>
-            <H1> <a href="/php/Txupit.php">TXUPIT</a> </H1>
+            <H1> <a href="../php/Txupit.php">TXUPIT</a> </H1>
         </nav>
 
 
@@ -60,9 +56,9 @@ while($actuel = pg_fetch_object($trajet)){
 
                 ?></p>
             <ul>
-                <li> <a href="/php/profil.php">Profil </a></li>
-                <li><a href=""> Reservation </a></li>
-                <li><a href="/php/annonce.php"> Annonce </a></li>
+                <li> <a href="../php/profil.php">Profil </a></li>
+                <li><a href="../php/reservation.php"> Reservation </a></li>
+                <li><a href="../php/annonce.php"> Annonce </a></li>
             </ul>
                      </div>
 
@@ -110,7 +106,7 @@ while($actuel = pg_fetch_object($trajet)){
             </footer>
         </body>
 
-        <script src="/jquery/jquery.js"></script>
+        <script src="../jquery/jquery.js"></script>
         <script>
        $("#mdp22").hide();
        $("#mdp2").mouseout(function(event){

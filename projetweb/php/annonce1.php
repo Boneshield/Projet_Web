@@ -38,10 +38,6 @@ while($actuel = pg_fetch_object($result)){
 
 pg_free_result($result) ;
 
-
-
-
-
     foreach($tab as $id=>$value){
 
         echo '<div id="container">
@@ -58,9 +54,4 @@ pg_free_result($result) ;
                       <a href="#" class="Button">Réserver</a>
                 </div>';
     }
-
-
-
-
-
 ?>

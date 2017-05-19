@@ -2,7 +2,7 @@
 	<html lang="fr">
         <head>
             <link rel="stylesheet" href="../css/reservation.css" />
-          <title> Txupit - Connexion </title>
+          <title> Txupit - Reservation </title>
         </head>
         <body>
 
@@ -31,18 +31,7 @@
             <H2> Trajet Reservé </H2>
             <div id="separation"></div>
 
-
-
-
-
-
-
             </div>
-
-
-
-
-
 
                <footer>
             <ul>
@@ -52,3 +41,4 @@
                 </ul>
             </footer>
         </body>
+</html>

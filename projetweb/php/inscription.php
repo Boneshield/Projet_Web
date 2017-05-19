@@ -2,7 +2,7 @@
 	<html lang="fr">
         <head>
             <link rel="stylesheet" href="../css/inscription.css" />
-          <title> Txupit - Connexion </title>
+          <title> Txupit - Inscription </title>
         </head>
         <body>
 
@@ -67,8 +67,5 @@
             }
 
        })
-
-
-
 
         </script>
