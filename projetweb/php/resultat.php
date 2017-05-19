@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <?php
+session_start();
+if(!isset($_SESSION['name']))
+{
+	echo '<script language="Javascript">
+	<!--
+	document.location.replace("http://127.0.0.1/projetweb/php/Connexion.php");
+	// -->
+	</script>';
+}
+
 $conn = pg_pconnect("host =localhost port=5432 dbname=covoiturage user=php password=test");
     if (!$conn) {
       echo "Une erreur s'est produite.\n";
@@ -59,12 +69,39 @@ pg_free_result($result) ;
         <nav>
                 <ul>
                 <li ><a href="../php/annonce.php" id="a1"> Proposer un trajet </a></li>
-                <li><a href="../php/inscirption.php" id="l1"> Inscription </a></li>
-                <li><a href="../php/Connexion.php" id="l2"> Connexion </a></li>
-                </ul>
-            <H1> <a href="../php/Txupit.php">TXUPIT</a> </H1>
-        </nav>
-             </header>
+
+                <?php
+	 						 if(isset($_SESSION['name']))
+	 						 {
+
+								echo '<li><a href="../php/deconnexion.php" id="l2"> Deconnexion </a></li>
+                		</ul>
+            			<H1> <a href="../php/Txupit.php">TXUPIT</a> </H1>
+        			</nav>
+             				</header>';
+
+
+						 	echo '<div id="co">
+                       <p> Bonjour ';
+										session_start();
+                    echo $_SESSION["name"];
+										echo '</p>
+             <ul>
+                 <li> <a href="../php/profil.php">Profil </a></li>
+                 <li><a href="../php/reservation.php"> Reservation </a></li>
+                 <li><a href="../php/annonce.php"> Annonce </a></li>
+             </ul>
+                      </div>';
+						 }
+						 else {
+						 	echo '<li><a href="../php/inscription.php" id="l1"> Inscription </a></li>
+									<li><a href="../php/Connexion.php" id="l2"> Connexion </a></li>
+									</ul>
+								<H1> <a href="../php/Txupit.php">TXUPIT</a> </H1>
+						</nav>
+									</header>';
+						 }
+						 ?>
 
              <div class="h-field_spacer"></div>
     <?php

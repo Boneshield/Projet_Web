@@ -69,13 +69,13 @@ if(!isset($_SESSION['name']))
             <h1> Selectionnez votre trajet </h1>
             <p> BONNE ROUTE !</p>
 
-                <form method="post" action="traitement.php">
+                <form method="post" action="../php/resultat.php">
 
-                <div class="c"> <input type="text" name="lieu départ" placeholder ="Lieu départ" /> </div>
-                 <div class="c">   <input type="text" name="lieu arrivé " placeholder="Lieu arrivé" /></div>
-                 <div class="c">   <input type="text" name="lieu départ" placeholder="ex:01/10/17" id="datepicker" /></div>
-                <a href="#" id="a2"> Rechercher </a>
-                </form>
+                <div class="c"> <input type="text" name="dep" placeholder ="Lieu départ" /> </div>
+                 <div class="c">   <input type="text" name="ar" placeholder="Lieu arrivé" /></div>
+                 <div class="c">   <input type="text" name="date" placeholder="ex:01/10/17" id="datepicker" /></div>
+								 <input type="submit" value="Rechercher" />
+							 </form>
             </div>
 
             </article>

@@ -29,7 +29,7 @@ $nbp=$_POST["nbp"];
 //pg_query($conn,"insert into trajet (adressedepart,adressarrivee,jourdepart,heuredepart,heurearrivee,nbplacesdispo) values '$lieudep','$lieuarr,'$datetrj','$hhd','$hha','$nbp'");
 
 
-pg_query($conn,"insert into trajet (cletrajet,adressedepart,adressearrivee,jourdepart,heuredepart,heurearrivee,nbplacesdispo) values (upper('{$lieudep}') , upper('{$lieuarr}') , '{$datetrj}' , '{$hhd}' , '{$hha}' , '{$nbp}') ");
+pg_query($conn,"insert into trajet (adressedepart,adressearrivee,jourdepart,heuredepart,heurearrivee,nbplacesdispo) values (upper('{$lieudep}') , upper('{$lieuarr}') , '{$datetrj}' , '{$hhd}' , '{$hha}' , '{$nbp}') ");
 
 
 echo '<script language="Javascript">
